@@ -47,9 +47,9 @@ done
 
 # Sign the request and obtain a certificate
 if [[ -f ".lego/certificates/$ILO_DOMAIN.crt" ]]; then
-	lego --server ${LE_SERVER-https://acme-v02.api.letsencrypt.org/directory} --email $LE_EMAIL --dns ${DNS_PROVIDER-cloudflare} --accept-tos --csr <(echo $resp) renew
+	lego --server ${LE_SERVER-https://acme-v02.api.letsencrypt.org/directory} --email $LE_EMAIL --dns.resolvers 1.1.1.1:53 --dns ${DNS_PROVIDER-cloudflare} --accept-tos --csr <(echo $resp) renew
 else
-	lego --server ${LE_SERVER-https://acme-v02.api.letsencrypt.org/directory} --email $LE_EMAIL --dns ${DNS_PROVIDER-cloudflare} --accept-tos --csr <(echo $resp) run
+	lego --server ${LE_SERVER-https://acme-v02.api.letsencrypt.org/directory} --email $LE_EMAIL --dns.resolvers 1.1.1.1:53 --dns ${DNS_PROVIDER-cloudflare} --accept-tos --csr <(echo $resp) run
 fi
 
 # Parse the cert back into something HPiLO will understand
