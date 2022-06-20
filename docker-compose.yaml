@@ -1,0 +1,21 @@
+services:
+  hpilo-letsencrypt:
+    build: .
+    volumes:
+      - .:/.lego
+      - logvolume01:/var/log
+    environment:
+      CLOUDFLARE_DNS_API_TOKEN: ${CLOUDFLARE_DNS_API_TOKEN}
+      ILO_USERNAME: ${ILO_USERNAME}
+      ILO_PASSWORD: ${ILO_PASSWORD}
+      DOMAINS: ${DOMAINS}
+      ILO_IP: ${ILO_IP}
+      LE_EMAIL: ${LE_EMAIL}
+      CERT_NAME: ${DOMAINS}
+      EXPIRY_THRESHOLD: 1814400
+      DNS_WAIT: 120
+      CREDENTIALS_FILE: "./cloudflare.ini"
+      CSR: "./cert.csr"
+      ILO_DOMAIN: ${DOMAINS}
+volumes:
+  logvolume01:
