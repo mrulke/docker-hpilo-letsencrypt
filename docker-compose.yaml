@@ -2,7 +2,7 @@ services:
   hpilo-letsencrypt:
     build: .
     volumes:
-      - .:/.lego
+      - lego:/.lego
       - logvolume01:/var/log
     environment:
       CLOUDFLARE_DNS_API_TOKEN: ${CLOUDFLARE_DNS_API_TOKEN}
@@ -18,4 +18,6 @@ services:
       CSR: "./cert.csr"
       ILO_DOMAIN: ${DOMAINS}
 volumes:
-  logvolume01:
+  logvolume01: 
+  lego:
+
