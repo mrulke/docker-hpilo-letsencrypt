@@ -1,15 +1,15 @@
-actionexecutionsimulator
 
-.*swp
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
-.DS_Store
+# Local History for Visual Studio Code
+.history/
 
-_output/
-.idea/
-.vscode/
-.DS_Store
-integration.test
-dlv
-bin
+# Built Visual Studio Code Extensions
+*.vsix
 .lego
 *.env
