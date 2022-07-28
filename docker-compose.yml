@@ -1,0 +1,19 @@
+services:
+  hpilo-esx1ilo:
+    build: .
+    volumes:
+      - lego:/.lego
+      - logvolume01:/var/log
+    env_file:
+    - esx1.env
+  hpilo-esx2ilo:
+    build: .
+    volumes:
+      - lego:/.lego
+      - logvolume01:/var/log
+    env_file:
+    - esx2.env
+volumes:
+  logvolume01: 
+  lego:
+

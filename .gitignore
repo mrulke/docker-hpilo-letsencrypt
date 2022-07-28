@@ -1,23 +1,15 @@
-actionexecutionsimulator
 
-./examples/vmt_testing_config.json
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
 
-./examples/kubeturbo/kubeturbo
+# Local History for Visual Studio Code
+.history/
 
-.*swp
-
-.DS_Store
-
-_output/
-.idea/
-.vscode/
-.DS_Store
-kubeturbo.iml
-kubeturbo
-kubeturbo.linux
-kubeturbo.debug
-integration.test
-dlv
-bin
+# Built Visual Studio Code Extensions
+*.vsix
 .lego
-.env
+*.env
