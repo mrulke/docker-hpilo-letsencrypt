@@ -1,9 +1,5 @@
 actionexecutionsimulator
 
-./examples/vmt_testing_config.json
-
-./examples/kubeturbo/kubeturbo
-
 .*swp
 
 .DS_Store
@@ -12,10 +8,6 @@ _output/
 .idea/
 .vscode/
 .DS_Store
-kubeturbo.iml
-kubeturbo
-kubeturbo.linux
-kubeturbo.debug
 integration.test
 dlv
 bin
