@@ -12,4 +12,4 @@ integration.test
 dlv
 bin
 .lego
-.env
+*.env
